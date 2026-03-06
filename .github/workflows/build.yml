@@ -32,7 +32,8 @@ jobs:
           - x86_64
           
         sdk:
-          - 25.12.0
+          - mediatek-filogic-25.12.0
+          - x86-64-25.12.0
 
     steps:
       - uses: actions/checkout@v5
@@ -56,7 +57,7 @@ jobs:
       - name: Building packages
         uses: openwrt/gh-action-sdk@main
         env:
-          ARCH: ${{ matrix.arch }}-${{ matrix.sdk }}
+          ARCH: ${{ matrix.sdk }}
           FEEDNAME: packages_ci
           PACKAGES: easytier luci-app-easytier
           #NO_DEFAULT_FEEDS: 1
