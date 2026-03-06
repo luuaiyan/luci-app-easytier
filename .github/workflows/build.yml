@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: '25.12.0-v1'
+        description: '发布版本号'
         required: false
         default: ''
       text:
-        description: 'luci-app-easytier for openwrt 25.12.0'
+        description: 'luci-app-easytier for openwrt'
         required: false
         default: ''
 concurrency:
